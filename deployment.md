@@ -66,6 +66,8 @@ Add these repository secrets:
 * `SECRET_KEY`
 * `FIRST_SUPERUSER_PASSWORD`
 
+If any required deployment variable or secret is missing, the workflow skips deployment instead of failing.
+
 Use the same values configured in FastAPI Cloud. For `DATABASE_URL`, use the connection URL from your database provider. The database must be reachable from GitHub-hosted runners so the preparation step can connect to it.
 
 The deployment workflow performs these steps:
